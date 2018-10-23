@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css?family=Arimo|Roboto|Comfortaa');
+
+.menu-icon{
+	position: fixed;
+	left: 80%;
+	top: 5%;
+	width: 50px;
+	height: 50px;    
+	border: solid #404040 3px;
+	border-radius: 10%;
+	z-index: 30;
+	-webkit-backface-visibility: hidden;
+}
+
+.menu-icon span {
+	position: absolute;
+	left: 50%;
+    width: 60%;
+    height: 4px;
+    background: #404040;
+    opacity: 1;
+    transition: .25s ease-in-out;
+    transform: translate(-50%, -50%); 
+}
+span#s1{
+	top:30%;
+}
+span#s2{
+	top:50%;
+}
+span#s3{
+	top:70%;
+}
+
+span#s1.on{
+	top: 68%;
+	left: 38%;
+    transform: rotate(45deg) translate(-50%, -50%);
+}
+span#s2.on{
+	opacity: 0;
+}
+span#s3.on{
+	top: 26%;
+	left: 44%;
+    transform: rotate(-45deg) translate(-50%, -50%);
+}
+@media only screen and (max-width: 450px){
+	.menu-cntr{
+		position: fixed;
+		-webkit-backface-visibility: hidden;
+	    z-index: 1;
+		left:0;
+		top: -20%;
+		width: 100%;
+		height: 20%;
+		background: rgba(45,45,45,.7);
+	    transition: .25s ease-in-out;
+		color: #404040;
+	}
+	.menu-cntr.on{
+		top: 0%;
+	}
+	.menu-icon.on{
+		border: solid white 3px;
+	}
+	.menu-cntr ul{
+		position: absolute;
+	    display: list-item;
+	    list-style: none;
+	    top: 0%;
+	    left: 40%;
+	    padding: 15px;
+	    padding-top: 10px;
+	    transform: translateX(-50%);
+	}
+	.menu-cntr ul > li{
+		text-align: center;
+	    padding: 8px;
+	    padding-top: 5px;
+	    width: 100%;
+	    transform: translate(-5%,-15%);
+
+	}
+	.menu-cntr ul > li > a {
+	    font-family: 'Comfortaa', 'Arial';
+	    font-size: 1.1em;
+	    text-decoration: none;
+	    text-align: center;
+	    color: white;
+	    padding: 14px 16px;
+	
+	}
+	span.on{
+		background: white;
+	}
+}
